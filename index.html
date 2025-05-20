@@ -1,0 +1,189 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bem-vindo à Agência Exittus</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    header img.banner {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    nav {
+      border-top: 2px solid #647C01;
+      border-bottom: 2px solid #647C01;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      font-size: 16px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #647C01;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a.ativo {
+      color: #000000;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #344800;
+    }
+
+    .conteudo {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .conteudo h2 {
+      color: #647C01;
+      margin-bottom: 1.5rem;
+      font-size: 28px;
+    }
+
+    .conteudo p {
+      text-align: justify;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .conteudo img {
+      display: block;
+      margin: 2rem auto;
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .conteudo img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #f4f4f4;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 2px solid #647C01;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 0.4rem 0;
+    }
+
+    footer small {
+      display: block;
+      margin-top: 1rem;
+      color: #666;
+      font-size: 13px;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-button img {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media (max-width: 480px) {
+      .whatsapp-button img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .conteudo h2 {
+        font-size: 22px;
+      }
+
+      .conteudo {
+        font-size: 15px;
+      }
+
+      nav {
+        font-size: 15px;
+      }
+
+      footer {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <header>
+    <img class="banner" src="imagens/banner.png" alt="Banner Exittus" />
+  </header>
+
+  <!-- Menu de Navegação -->
+  <nav>
+    <a href="bemvindo.html" class="ativo">BEM VINDO</a>
+    <a href="sobre.html">SOBRE</a>
+    <a href="missao.html">MISSÃO</a>
+    <a href="visao.html">VISÃO</a>
+    <a href="valores.html">VALORES</a>
+    <a href="servicos.html">SERVIÇOS</a>
+    <a href="contato.html">CONTATO</a>
+    <a href="plataforma.html">PLATAFORMA</a>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <section class="conteudo">
+    <img src="imagens/bemvindo.png" alt="Imagem de Boas-vindas" />
+
+    <h2>Bem-vindo à Exittus</h2>
+
+    <p>Somos especialistas em criar pontes sólidas entre profissionais e empresas, com um olhar humano, estratégico e alinhado às transformações do mercado de trabalho.</p>
+    <p>Nosso compromisso vai muito além do recrutamento. Acreditamos no poder da escuta, no acolhimento e na orientação personalizada para cada jornada. Atuamos com empatia, ética e excelência, apoiando o desenvolvimento de carreiras e contribuindo para o crescimento sustentável das organizações.</p>
+    <p>Com uma equipe multidisciplinar, utilizamos tecnologia, testes comportamentais e metodologias inovadoras para garantir assertividade na seleção e agilidade nos processos. Também contamos com um espaço físico preparado para admissões, entrevistas e desligamentos humanizados — tudo para tornar a experiência mais confortável e eficiente para todos os envolvidos.</p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p><strong>Endereço:</strong> R. São José, 584 - sala 204 - Centro, Guaíba - RS, 92704-380</p>
+    <p><strong>Telefone:</strong> (51) 99338-1495</p>
+    <p><strong>E-mail:</strong> adm@agenciaexittus.com</p>
+    <small>&copy; 2025 Agência Exittus. Todos os direitos reservados.</small>
+  </footer>
+
+  <!-- Botão WhatsApp Fixo -->
+  <a class="whatsapp-button" href="https://wa.me/5551993381495" target="_blank" rel="noopener">
+    <img src="imagens/whatsapp.png" alt="WhatsApp" />
+  </a>
+
+</body>
+</html>
