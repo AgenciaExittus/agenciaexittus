@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Visão - Agência Exittus</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    nav {
+      border-top: 2px solid #647C01;
+      border-bottom: 2px solid #647C01;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      background-color: #f9f9f9;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #647C01;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a.ativo {
+      color: #000000;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #344800;
+    }
+
+    .conteudo {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    .conteudo h1, .conteudo h2 {
+      color: #647C01;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .conteudo p {
+      line-height: 1.6;
+      text-align: justify;
+      margin-bottom: 1rem;
+    }
+
+    .conteudo ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      padding-left: 0;
+      color: #647C01;
+    }
+
+    .conteudo ul li {
+      text-align: justify;
+      margin-bottom: 1rem;
+      color: #333;
+      position: relative;
+    }
+
+    .conteudo ul li::marker {
+      color: #647C01;
+    }
+
+    footer {
+      background-color: #f4f4f4;
+      padding: 2rem;
+      text-align: center;
+      border-top: 2px solid #647C01;
+      font-size: 0.95rem;
+    }
+
+    footer p {
+      margin: 0.4rem 0;
+    }
+
+    footer small {
+      display: block;
+      margin-top: 1rem;
+      color: #666;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 999;
+    }
+
+    .whatsapp-button img {
+      width: 100px;
+      height:100px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .whatsapp-button img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <header>
+    <img src="imagens/banner.png" alt="Banner Exittus" />
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <a href="bemvindo.html">BEM VINDO</a>
+    <a href="sobre.html">SOBRE</a>
+    <a href="missao.html"class="ativo">MISSÃO</a>
+    <a href="visao.html">VISÃO</a>
+    <a href="valores.html">VALORES</a>
+    <a href="servicos.html">SERVIÇOS</a>
+    <a href="contato.html">CONTATO</a>
+    <a href="plataforma.html">PLATAFORMA</a>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <section class="conteudo">
+    <h1>Nossa Missão</h1>
+    <ul>
+      <li>Ser reconhecida como a principal agência de recrutamento e seleção do Rio Grande do Sul e região Sul do Brasil.</li>
+      <li>Expandir nossas operações para atender empresas de todos os portes, sempre mantendo a excelência e o foco no cliente.</li>
+      <li>Inovar continuamente nos processos e tecnologias para otimizar a captação e o desenvolvimento de talentos.</li>
+      <li>Construir parcerias duradouras que promovam crescimento sustentável para clientes e candidatos.</li>
+      <li>Inspirar o mercado de recursos humanos com práticas éticas, inclusivas e focadas no desenvolvimento humano.</li>
+    </ul>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p><strong>Endereço:</strong> R. São José, 584 - sala 204 - Centro, Guaíba - RS, 92704-380</p>
+    <p><strong>Telefone:</strong> (51) 99338-1495</p>
+    <p><strong>E-mail:</strong> adm@agenciaexittus.com</p>
+    <small>&copy; 2025 Agência Exittus. Todos os direitos reservados.</small>
+  </footer>
+
+  <!-- Botão WhatsApp -->
+  <a class="whatsapp-button" href="https://wa.me/5551993381495" target="_blank" rel="noopener">
+    <img src="imagens/whatsapp.png" alt="WhatsApp" />
+  </a>
+
+</body>
+</html>
