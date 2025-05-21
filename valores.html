@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Valores - Agência Exittus</title>
+  <title>Plataforma - Agência Exittus</title>
   <style>
     body {
       margin: 0;
@@ -26,20 +26,21 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      background-color: #f9f9f9;
+      gap: 1rem;
       padding: 1rem 0;
+      background-color: #f9f9f9;
     }
 
     nav a {
       text-decoration: none;
       color: #647C01;
       font-weight: bold;
-      padding: 0.5rem 1rem;
       transition: color 0.3s;
     }
 
     nav a.ativo {
       color: #000000;
+      font-weight: bold;
     }
 
     nav a:hover {
@@ -70,18 +71,23 @@
       margin-bottom: 1.2rem;
       padding-left: 1.8rem;
       position: relative;
-      color: #000;
+      color: #000000; /* texto preto */
     }
 
     ul li::before {
       content: "●";
-      color: #647C01;
+      color: #647C01; /* bullet verde */
       position: absolute;
       left: 0;
       top: 0;
       font-weight: bold;
       font-size: 1.3rem;
       line-height: 1rem;
+    }
+
+    a {
+      color: #647C01;
+      text-decoration: underline;
     }
 
     footer {
@@ -109,13 +115,13 @@
       z-index: 999;
     }
 
-    .whatsapp-button img {
-      max-width: 100px;
-      max-height: 100px;
-      width: auto;
-      height: auto;
-      display: block;
-    }
+  .whatsapp-button img {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  display: block;
+}
 
     .logo-final {
       display: block;
@@ -125,18 +131,15 @@
     }
 
     @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav a {
-        margin: 0.3rem 0;
-      }
+  .whatsapp-button img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
 
       .whatsapp-button img {
-        max-width: 80px;
-        max-height: 80px;
+        width: 100px;
+        height: 100px;
       }
 
       .logo-final {
@@ -152,21 +155,46 @@
     <img src="banner.png" alt="Banner Exittus" />
   </header>
 
-  <!-- Navegação (sem quebras de linha entre os links) -->
-  <nav><a href="bemvindo.html">BEM VINDO</a><a href="sobre.html">SOBRE</a><a href="missao.html">MISSÃO</a><a href="visao.html">VISÃO</a><a href="valores.html" class="ativo">VALORES</a><a href="servicos.html">SERVIÇOS</a><a href="contato.html">CONTATO</a><a href="plataforma.html">PLATAFORMA</a></nav>
+  <!-- Navegação -->
+  <nav>
+    <a href="bemvindo.html">BEM VINDO</a>
+    <a href="sobre.html">SOBRE</a>
+    <a href="missao.html">MISSÃO</a>
+    <a href="visao.html">VISÃO</a>
+    <a href="valores.html">VALORES</a>
+    <a href="servicos.html">SERVIÇOS</a>
+    <a href="contato.html">CONTATO</a>
+    <a href="plataforma.html" class="ativo">PLATAFORMA</a>
+  </nav>
 
   <!-- Conteúdo Principal -->
   <section class="conteudo">
-    <h1>Nossos Valores</h1>
+    <h1><strong>PLATAFORMA ATS SELECTY 🚀</strong></h1>
     <ul>
-      <li>Agimos com ética e transparência em todos os nossos relacionamentos, construindo uma base sólida de confiança mútua com clientes, parceiros e colaboradores.</li>
-      <li>Comprometemo-nos com a excelência, buscando constantemente a melhoria contínua dos nossos processos para garantir qualidade em cada entrega realizada.</li>
-      <li>Valorizamos as pessoas, promovendo um ambiente de respeito, inclusão, diversidade e desenvolvimento, onde cada talento é reconhecido e estimulado a crescer.</li>
-      <li>Acreditamos na inovação como motor do progresso. Estamos abertos a novas ideias e tecnologias que aprimorem nossos serviços e fortaleçam nosso impacto no mercado.</li>
-      <li>Atuamos com responsabilidade social, contribuindo ativamente para o desenvolvimento sustentável e para o bem-estar das comunidades onde estamos inseridos.</li>
-      <li>Estimamos o trabalho em equipe e a colaboração como pilares do sucesso, cultivando um ambiente cooperativo onde todos caminham juntos por um propósito comum.</li>
-      <li>Construímos nossa reputação com base em confiança, credibilidade e consistência, entregando resultados sólidos que refletem nosso compromisso com a excelência.</li>
+      <li><strong>O que é a Selecty? 🤔</strong><br>
+        A Selecty é uma plataforma ATS (Applicant Tracking System) que facilita e automatiza o processo de recrutamento e seleção, conectando empresas e candidatos de forma eficiente e transparente.
+      </li>
+      <li><strong>Benefícios da Selecty para você! 🌟</strong><br>
+        • Processo rápido e simplificado de candidatura.<br>
+        • Triagem automática de currículos para que você seja avaliado com mais agilidade.<br>
+        • Centralização de todas as suas inscrições em um só lugar, com acompanhamento em tempo real.<br>
+        • Ferramentas para ajudar os recrutadores a encontrar o candidato ideal, aumentando suas chances.
+      </li>
+      <li><strong>Como funciona? ⚙️</strong><br>
+        A plataforma recebe os currículos dos candidatos e, por meio de filtros inteligentes e inteligência artificial, faz a pré-seleção para as vagas. Isso agiliza o trabalho dos recrutadores e permite que você receba feedback mais rápido.
+      </li>
+      <li><strong>Quer começar? 🎉</strong><br>
+        Cadastre-se na plataforma e tenha acesso às vagas disponíveis da Agência Exittus e de nossos parceiros. É simples, rápido e 100% online!
+      </li>
     </ul>
+    <p style="text-align: center; font-weight: bold;">
+      Acesse agora e faça seu cadastro:<br>
+      <a href="https://agenciaexittus.selecty.com.br/login" target="_blank" rel="noopener">https://agenciaexittus.selecty.com.br/login</a>
+    </p>
+    <p style="text-align: center;">
+      Saiba mais sobre a plataforma em:<br>
+      <a href="https://selecty.app/home" target="_blank" rel="noopener">https://selecty.app/home</a>
+    </p>
   </section>
 
   <!-- Rodapé -->
