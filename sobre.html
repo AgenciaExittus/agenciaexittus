@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre - Agência Exittus</title>
+  <title>Plataforma - Agência Exittus</title>
   <style>
     body {
       margin: 0;
@@ -52,8 +52,6 @@
       max-width: 900px;
       margin: 2rem auto;
       text-align: justify;
-      color: #000000;
-      line-height: 1.6;
     }
 
     .conteudo h1 {
@@ -62,8 +60,34 @@
       margin-bottom: 1.5rem;
     }
 
-    .conteudo p {
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 2rem;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul li {
       margin-bottom: 1.2rem;
+      padding-left: 1.8rem;
+      position: relative;
+      color: #000000; /* texto preto */
+    }
+
+    ul li::before {
+      content: "●";
+      color: #647C01; /* bullet verde */
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: bold;
+      font-size: 1.3rem;
+      line-height: 1rem;
+    }
+
+    a {
+      color: #647C01;
+      text-decoration: underline;
     }
 
     footer {
@@ -91,13 +115,13 @@
       z-index: 999;
     }
 
-    .whatsapp-button img {
-      max-width: 100px;
-      max-height: 100px;
-      width: auto;
-      height: auto;
-      display: block;
-    }
+  .whatsapp-button img {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  display: block;
+}
 
     .logo-final {
       display: block;
@@ -107,15 +131,15 @@
     }
 
     @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-      }
+  .whatsapp-button img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
 
       .whatsapp-button img {
-        max-width: 80px;
-        max-height: 80px;
+        width: 100px;
+        height: 100px;
       }
 
       .logo-final {
