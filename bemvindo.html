@@ -5,19 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bem-vindo à Agência Exittus</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #ffffff;
       color: #333;
     }
 
-    header img.banner {
+    header img {
       width: 100%;
       height: auto;
       max-height: 250px;
@@ -31,10 +26,9 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
+      gap: 1rem;
+      padding: 1rem 0;
       background-color: #f9f9f9;
-      font-size: 16px;
     }
 
     nav a {
@@ -54,21 +48,19 @@
     }
 
     .conteudo {
-      padding: 2rem 1rem;
+      padding: 2rem;
       max-width: 900px;
       margin: 2rem auto;
-      text-align: center;
-      font-size: 16px;
+      text-align: justify;
     }
 
-    .conteudo h2 {
+    .conteudo h1 {
       color: #647C01;
+      text-align: center;
       margin-bottom: 1.5rem;
-      font-size: 28px;
     }
 
     .conteudo p {
-      text-align: justify;
       margin-bottom: 1.5rem;
       line-height: 1.6;
     }
@@ -89,10 +81,10 @@
 
     footer {
       background-color: #f4f4f4;
-      padding: 2rem 1rem;
+      padding: 2rem;
       text-align: center;
       border-top: 2px solid #647C01;
-      font-size: 14px;
+      font-size: 0.95rem;
     }
 
     footer p {
@@ -103,41 +95,27 @@
       display: block;
       margin-top: 1rem;
       color: #666;
-      font-size: 13px;
     }
 
     .whatsapp-button {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 25px;
+      right: 25px;
       z-index: 999;
     }
 
     .whatsapp-button img {
-      width: 100px;
-      height: 100px;
+      max-width: 100px;
+      max-height: 100px;
+      width: auto;
+      height: auto;
+      display: block;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
       .whatsapp-button img {
-        width: 50px;
-        height: 50px;
-      }
-
-      .conteudo h2 {
-        font-size: 22px;
-      }
-
-      .conteudo {
-        font-size: 15px;
-      }
-
-      nav {
-        font-size: 15px;
-      }
-
-      footer {
-        font-size: 13px;
+        max-width: 80px;
+        max-height: 80px;
       }
     }
   </style>
@@ -146,10 +124,10 @@
 
   <!-- Banner -->
   <header>
-    <img class="banner" src="banner.png" alt="Banner Exittus" />
+    <img src="banner.png" alt="Banner Exittus" />
   </header>
 
-  <!-- Menu de Navegação -->
+  <!-- Navegação -->
   <nav>
     <a href="bemvindo.html" class="ativo">BEM VINDO</a>
     <a href="sobre.html">SOBRE</a>
@@ -165,7 +143,7 @@
   <section class="conteudo">
     <img src="bemvindo.png" alt="Bem-vindo" />
 
-    <h2>Bem-vindo à Exittus</h2>
+    <h1>Bem-vindo à Exittus</h1>
 
     <p>Somos especialistas em criar pontes sólidas entre profissionais e empresas, com um olhar humano, estratégico e alinhado às transformações do mercado de trabalho.</p>
     <p>Nosso compromisso vai muito além do recrutamento. Acreditamos no poder da escuta, no acolhimento e na orientação personalizada para cada jornada. Atuamos com empatia, ética e excelência, apoiando o desenvolvimento de carreiras e contribuindo para o crescimento sustentável das organizações.</p>
@@ -180,7 +158,7 @@
     <small>&copy; 2025 Agência Exittus. Todos os direitos reservados.</small>
   </footer>
 
-  <!-- Botão WhatsApp Fixo -->
+  <!-- Botão WhatsApp -->
   <a class="whatsapp-button" href="https://wa.me/5551993381495" target="_blank" rel="noopener">
     <img src="whatsapp.png" alt="WhatsApp" />
   </a>
