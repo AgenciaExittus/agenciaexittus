@@ -1,23 +1,18 @@
-<!-- Página HOME (home.html ou index.html) -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bem-vindo à Exittus</title>
+  <title>Agência Exittus - Sobre</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #ffffff;
       color: #333;
     }
 
-    header img.banner {
+    header img {
       width: 100%;
       height: auto;
       max-height: 250px;
@@ -31,8 +26,8 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
+      gap: 1rem;
+      padding: 1rem 0;
       background-color: #f9f9f9;
     }
 
@@ -43,46 +38,37 @@
       transition: color 0.3s;
     }
 
+    nav a.ativo {
+      color: #000000;
+      font-weight: bold;
+    }
+
     nav a:hover {
       color: #344800;
     }
 
-    .home {
+    .conteudo {
+      padding: 2rem;
       max-width: 900px;
       margin: 2rem auto;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    .home h1 {
-      color: #647C01;
-      margin-bottom: 1rem;
-    }
-
-    .home p {
-      font-size: 1.1rem;
-      line-height: 1.6;
       text-align: justify;
+      color: #000;
     }
 
-    .home img {
-      margin-top: 2rem;
-      max-width: 300px;
-      width: 80%;
-      height: auto;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      transition: transform 0.3s ease;
+    .conteudo h1 {
+      color: #647C01;
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
 
-    .home img:hover {
-      transform: scale(1.05);
+    .conteudo p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
     }
 
     footer {
       background-color: #f4f4f4;
-      padding: 2rem 1rem;
+      padding: 2rem;
       text-align: center;
       border-top: 2px solid #647C01;
       font-size: 0.95rem;
@@ -98,64 +84,72 @@
       color: #666;
     }
 
-    .whatsapp-button img {
-  max-width: 100px;
-  max-height: 100px;
-  width: auto;
-  height: auto;
-  display: block;
-} 
-
-    .whatsapp-button img {
-      width: 100px;
-      height: 100px;
+    .whatsapp-button {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 999;
     }
 
-    @media (max-width: 480px) {
+    .whatsapp-button img {
+      max-width: 100px;
+      max-height: 100px;
+      width: auto;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
       .whatsapp-button img {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Banner -->
   <header>
-    <img class="banner" src="imagens/banner.png" alt="Banner Exittus" />
+    <img src="banner.png" alt="Banner Exittus" />
   </header>
 
+  <!-- Navegação -->
   <nav>
     <a href="bemvindo.html">BEM VINDO</a>
-    <a href="home.html">HOME</a>
-    <a href="sobre.html">SOBRE</a>
+    <a href="sobre.html" class="ativo">SOBRE</a>
     <a href="missao.html">MISSÃO</a>
     <a href="visao.html">VISÃO</a>
     <a href="valores.html">VALORES</a>
     <a href="servicos.html">SERVIÇOS</a>
     <a href="contato.html">CONTATO</a>
-    <a href="plataforma.html">CADASTRO</a>
+    <a href="plataforma.html">PLATAFORMA</a>
   </nav>
 
-  <section class="home">
-    <h1>Seja bem-vindo à Agência Exittus!</h1>
+  <!-- Conteúdo Principal -->
+  <section class="conteudo">
+    <h1>Sobre a Agência Exittus</h1>
     <p>
-      Aqui, acreditamos que cada história profissional tem valor e merece ser escrita com propósito.  
-      Atuamos com dedicação para conectar empresas e talentos de forma humana, ética e estratégica,  
-      oferecendo soluções personalizadas em recrutamento, seleção e desenvolvimento de pessoas.  
+      Fundada com o propósito de transformar o mercado de trabalho, a Agência Exittus é uma empresa especializada em recrutamento, seleção e desenvolvimento de talentos. 
     </p>
     <p>
-      Seja você um candidato em busca de novas oportunidades ou uma empresa em busca de profissionais alinhados à sua cultura,  
-      conte conosco para transformar objetivos em conquistas reais.
+      Nossa equipe é formada por profissionais comprometidos em oferecer soluções personalizadas e humanas, alinhadas às necessidades das empresas e dos candidatos. Valorizamos a ética, a transparência e o respeito em todas as nossas relações.
     </p>
     <p>
-      Navegue pelo nosso site, conheça nossos serviços e permita que a Exittus seja sua parceira de confiança  
-      na construção de um futuro profissional de sucesso!
+      Atuamos com tecnologia e inovação para facilitar processos, garantindo eficiência e qualidade na entrega dos nossos serviços. Nosso foco está no desenvolvimento sustentável e no crescimento contínuo, construindo parcerias duradouras e de confiança.
     </p>
-
-    <img src="imagens/bemvindo.png" alt="Logo Exittus" />
+    <p>
+      Na Exittus, acreditamos que o sucesso das organizações está diretamente ligado ao potencial das pessoas, por isso trabalhamos para conectar oportunidades a talentos que façam a diferença.
+    </p>
   </section>
 
+  <!-- Rodapé -->
   <footer>
     <p><strong>Endereço:</strong> R. São José, 584 - sala 204 - Centro, Guaíba - RS, 92704-380</p>
     <p><strong>Telefone:</strong> (51) 99338-1495</p>
@@ -163,10 +157,10 @@
     <small>&copy; 2025 Agência Exittus. Todos os direitos reservados.</small>
   </footer>
 
+  <!-- Botão WhatsApp -->
   <a class="whatsapp-button" href="https://wa.me/5551993381495" target="_blank" rel="noopener">
-    <img src="imagens/whatsapp.png" alt="WhatsApp" />
+    <img src="whatsapp.png" alt="WhatsApp" />
   </a>
 
 </body>
 </html>
-
