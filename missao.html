@@ -12,7 +12,7 @@
       color: #333;
     }
 
-    header img.banner, header img {
+    header img {
       width: 100%;
       height: auto;
       max-height: 250px;
@@ -51,36 +51,18 @@
       padding: 2rem;
       max-width: 900px;
       margin: 2rem auto;
+      text-align: justify;
     }
 
-    .conteudo h1, .conteudo h2 {
+    .conteudo h1 {
       color: #647C01;
       text-align: center;
       margin-bottom: 1.5rem;
     }
 
-    .conteudo p {
-      line-height: 1.6;
-      text-align: justify;
-      margin-bottom: 1rem;
-    }
-
-    .conteudo ul {
-      list-style-type: disc;
-      margin-left: 2rem;
-      padding-left: 0;
+    a {
       color: #647C01;
-    }
-
-    .conteudo ul li {
-      text-align: justify;
-      margin-bottom: 1rem;
-      color: #333;
-      position: relative;
-    }
-
-    .conteudo ul li::marker {
-      color: #647C01;
+      text-decoration: underline;
     }
 
     footer {
@@ -101,29 +83,25 @@
       color: #666;
     }
 
-   .whatsapp-button img {
-  max-width: 100px;
-  max-height: 100px;
-  width: auto;
-  height: auto;
-  display: block;
-} 
+    .whatsapp-button {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 999;
+    }
 
     .whatsapp-button img {
-      width: 100px;
-      height:100px;
+      max-width: 100px;
+      max-height: 100px;
+      width: auto;
+      height: auto;
+      display: block;
     }
 
     @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
       .whatsapp-button img {
-        width: 80px;
-        height: 80px;
+        max-width: 80px;
+        max-height: 80px;
       }
     }
   </style>
@@ -139,7 +117,7 @@
   <nav>
     <a href="bemvindo.html">BEM VINDO</a>
     <a href="sobre.html">SOBRE</a>
-    <a href="missao.html"class="ativo">MISSÃO</a>
+    <a href="missao.html" class="ativo">MISSÃO</a>
     <a href="visao.html">VISÃO</a>
     <a href="valores.html">VALORES</a>
     <a href="servicos.html">SERVIÇOS</a>
@@ -150,13 +128,9 @@
   <!-- Conteúdo Principal -->
   <section class="conteudo">
     <h1>Nossa Missão</h1>
-    <ul>
-      <li>Ser reconhecida como a principal agência de recrutamento e seleção do Rio Grande do Sul e região Sul do Brasil.</li>
-      <li>Expandir nossas operações para atender empresas de todos os portes, sempre mantendo a excelência e o foco no cliente.</li>
-      <li>Inovar continuamente nos processos e tecnologias para otimizar a captação e o desenvolvimento de talentos.</li>
-      <li>Construir parcerias duradouras que promovam crescimento sustentável para clientes e candidatos.</li>
-      <li>Inspirar o mercado de recursos humanos com práticas éticas, inclusivas e focadas no desenvolvimento humano.</li>
-    </ul>
+    <p>
+      Ser reconhecida como a principal agência de recrutamento e seleção do Rio Grande do Sul e região Sul do Brasil. Expandir nossas operações para atender empresas de todos os portes, sempre mantendo a excelência e o foco no cliente. Inovar continuamente nos processos e tecnologias para otimizar a captação e o desenvolvimento de talentos. Construir parcerias duradouras que promovam crescimento sustentável para clientes e candidatos. Inspirar o mercado de recursos humanos com práticas éticas, inclusivas e focadas no desenvolvimento humano.
+    </p>
   </section>
 
   <!-- Rodapé -->
