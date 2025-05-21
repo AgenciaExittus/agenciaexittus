@@ -109,10 +109,13 @@
       z-index: 999;
     }
 
-    .whatsapp-button img {
-      width: 100px;
-      height: 100px;
-    }
+.whatsapp-button img {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  display: block;
+}
 
     .logo-final {
       display: block;
@@ -121,12 +124,12 @@
       height: auto;
     }
 
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-      }
+  @media (max-width: 600px) {
+  .whatsapp-button img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
 
       .whatsapp-button img {
         width: 100px;
