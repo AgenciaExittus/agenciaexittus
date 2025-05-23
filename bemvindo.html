@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bem-vindo à Agência Exittus</title>
   <style>
     body {
@@ -12,12 +12,28 @@
       color: #333;
     }
 
-    header img {
-      width: 100%;
-      height: auto;
-      max-height: 250px;
+    header {
+      background-color: #4F7214;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .header-left img {
+      height: 100px;
+      width: auto;
       display: block;
-      margin: 0 auto;
     }
 
     nav {
@@ -96,15 +112,15 @@
     }
 
     .conteudo h1 {
-      color: #647C01;
       text-align: center;
+      color: #647C01;
       margin-bottom: 1.5rem;
       font-size: 2.5rem;
       font-weight: 700;
       letter-spacing: 2px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-transform: uppercase;
       text-shadow: 1px 1px 2px rgba(100,124,1,0.3);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .conteudo p {
@@ -184,11 +200,13 @@
     }
 
     @media (max-width: 600px) {
-      .whatsapp-button img {
-        max-width: 80px;
-        max-height: 80px;
+      header {
+        height: 100px;
+        padding: 0 10px;
       }
-
+      .header-left img {
+        height: 70px;
+      }
       nav {
         justify-content: center;
         gap: 0.5rem;
@@ -207,9 +225,12 @@
 </head>
 <body>
 
-  <!-- Banner -->
+  <!-- Cabeçalho com fundo verde, logo à esquerda e texto ao lado -->
   <header>
-    <img src="banner.png" alt="Banner Exittus" />
+    <div class="header-left">
+      <img src="fundo.png" alt="Logo Agência Exittus" />
+      <span>Agência Exittus - Soluções Humanas em Recrutamento</span>
+    </div>
   </header>
 
   <!-- Navegação -->
@@ -258,6 +279,5 @@
 
 </body>
 </html>
-
 
 
