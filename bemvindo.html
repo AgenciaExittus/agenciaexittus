@@ -29,22 +29,57 @@
       gap: 1rem;
       padding: 1rem 0;
       background-color: #f9f9f9;
+      position: relative;
     }
 
-    nav a {
+    nav a,
+    .dropdown {
+      position: relative;
       text-decoration: none;
       color: #647C01;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+
+    nav a:hover,
+    .dropdown:hover > a {
+      background-color: #e9f0d1;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      color: #344800;
     }
 
     nav a.ativo {
       color: #000000;
-      font-weight: bold;
     }
 
-    nav a:hover {
-      color: #344800;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 999;
+      min-width: 200px;
+      top: 100%;
+      left: 0;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-align: left;
+      color: #647C01;
+      font-weight: normal;
+      background-color: #fff;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f5e1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     .conteudo {
@@ -58,11 +93,18 @@
       color: #647C01;
       text-align: center;
       margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 2px rgba(100,124,1,0.3);
     }
 
     .conteudo p {
       margin-bottom: 1.5rem;
       line-height: 1.6;
+      font-size: 1.1rem;
     }
 
     .conteudo img {
@@ -77,6 +119,29 @@
 
     .conteudo img:hover {
       transform: scale(1.05);
+    }
+
+    .fale-conosco-btn {
+      display: inline-block;
+      margin: 2rem auto 0 auto;
+      padding: 12px 28px;
+      background-color: #647C01;
+      color: white;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(100,124,1,0.4);
+      transition: background-color 0.3s ease;
+      text-align: center;
+      display: block;
+      max-width: 200px;
+    }
+
+    .fale-conosco-btn:hover {
+      background-color: #A9C843;
+      box-shadow: 0 6px 12px rgba(169,200,67,0.6);
     }
 
     footer {
@@ -117,6 +182,18 @@
         max-width: 80px;
         max-height: 80px;
       }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .dropdown-content {
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+      }
     }
   </style>
 </head>
@@ -137,17 +214,27 @@
     <a href="servicos.html">SERVIÇOS</a>
     <a href="contato.html">CONTATO</a>
     <a href="plataforma.html">PLATAFORMA</a>
+
+    <!-- Dropdown INFORMAÇÕES -->
+    <div class="dropdown">
+      <a href="#">INFORMAÇÕES</a>
+      <div class="dropdown-content">
+        <a href="cookies.html">Cookies</a>
+        <a href="lgbt.html">LGBT+</a>
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="lgpd.html">Lei Geral de Proteção de Dados</a>
+      </div>
+    </div>
   </nav>
 
   <!-- Conteúdo Principal -->
   <section class="conteudo">
     <img src="bemvindo.png" alt="Bem-vindo" />
-
-    <h1>Bem-vindo à Exittus</h1>
-
+    <h1>Conectando Talentos ao Futuro</h1>
     <p>Somos especialistas em criar pontes sólidas entre profissionais e empresas, com um olhar humano, estratégico e alinhado às transformações do mercado de trabalho.</p>
     <p>Nosso compromisso vai muito além do recrutamento. Acreditamos no poder da escuta, no acolhimento e na orientação personalizada para cada jornada. Atuamos com empatia, ética e excelência, apoiando o desenvolvimento de carreiras e contribuindo para o crescimento sustentável das organizações.</p>
     <p>Com uma equipe multidisciplinar, utilizamos tecnologia, testes comportamentais e metodologias inovadoras para garantir assertividade na seleção e agilidade nos processos. Também contamos com um espaço físico preparado para admissões, entrevistas e desligamentos humanizados — tudo para tornar a experiência mais confortável e eficiente para todos os envolvidos.</p>
+    <a href="contato.html" class="fale-conosco-btn">Fale Conosco</a>
   </section>
 
   <!-- Rodapé -->
