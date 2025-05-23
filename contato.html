@@ -2,9 +2,8 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Agência Exittus - Contato</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visão - Agência Exittus</title>
   <style>
     body {
       margin: 0;
@@ -13,12 +12,28 @@
       color: #333;
     }
 
-    header img.banner, header img {
-      width: 100%;
-      height: auto;
-      max-height: 250px;
+    header {
+      background-color: #4F7214;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .header-left img {
+      height: 100px;
+      width: auto;
       display: block;
-      margin: 0 auto;
     }
 
     nav {
@@ -30,65 +45,127 @@
       gap: 1rem;
       padding: 1rem 0;
       background-color: #f9f9f9;
+      position: relative;
     }
 
-    nav a {
+    nav a,
+    .dropdown > a {
+      position: relative;
       text-decoration: none;
       color: #647C01;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      display: inline-block;
     }
 
-    nav a:hover {
+    nav a:hover,
+    .dropdown:hover > a {
+      background-color: #e9f0d1;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
       color: #344800;
     }
 
     nav a.ativo {
       color: #000000;
-      font-weight: bold;
     }
 
-    section.contato {
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 999;
+      min-width: 200px;
+      top: 100%;
+      left: 0;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-align: left;
+      color: #647C01;
+      font-weight: normal;
+      background-color: #fff;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f5e1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .conteudo {
       padding: 2rem;
       max-width: 900px;
       margin: 2rem auto;
-      text-align: center;
+      text-align: justify;
     }
 
-    section.contato h2 {
+    .conteudo h1 {
+      text-align: center;
       color: #647C01;
       margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 2px rgba(100,124,1,0.3);
     }
 
-    section.contato p {
+    .conteudo ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+    }
+
+    .conteudo ul li {
+      color: #000;
       margin-bottom: 1rem;
-      font-size: 1.1rem;
-      line-height: 1.5;
     }
 
-    section.contato iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
+    .conteudo ul li::marker {
+      color: #4F7214;
+    }
+
+    .contato {
+      text-align: center;
+      padding: 2rem;
     }
 
     .redes-sociais {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+      gap: 15px;
+      margin: 20px 0;
     }
 
-    .redes-sociais a img {
-      width: 40px;
-      height: 40px;
-      transition: opacity 0.3s;
+    .redes-sociais img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s;
     }
 
-    .redes-sociais a:hover img {
-      opacity: 0.7;
+    .redes-sociais img:hover {
+      transform: scale(1.1);
+    }
+
+    .contato iframe {
+      display: block;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 600px;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
     }
 
     footer {
@@ -109,12 +186,11 @@
       color: #666;
     }
 
-    /* Botão WhatsApp fixo no canto inferior direito */
     .whatsapp-button {
       position: fixed;
       bottom: 25px;
       right: 25px;
-      z-index: 9999;
+      z-index: 999;
     }
 
     .whatsapp-button img {
@@ -126,9 +202,27 @@
     }
 
     @media (max-width: 600px) {
-      .whatsapp-button img {
-        max-width: 80px;
-        max-height: 80px;
+      header {
+        height: 100px;
+        padding: 0 10px;
+      }
+
+      .header-left img {
+        height: 70px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        flex-wrap: wrap;
+      }
+
+      .dropdown-content {
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
       }
     }
   </style>
@@ -136,18 +230,30 @@
 <body>
 
   <header>
-    <img src="banner.png" alt="Banner Exittus" />
+    <div class="header-left">
+      <img src="fundo.png" alt="Logo Agência Exittus" />
+      <span>Agência Exittus</span>
+    </div>
   </header>
 
   <nav>
     <a href="bemvindo.html">BEM VINDO</a>
     <a href="sobre.html">SOBRE</a>
     <a href="missao.html">MISSÃO</a>
-    <a href="visao.html">VISÃO</a>
+    <a href="visao.html" class="ativo">VISÃO</a>
     <a href="valores.html">VALORES</a>
     <a href="servicos.html">SERVIÇOS</a>
-    <a href="contato.html" class="ativo">CONTATO</a>
+    <a href="contato.html">CONTATO</a>
     <a href="plataforma.html">PLATAFORMA</a>
+    <div class="dropdown">
+      <a href="#">INFORMAÇÕES</a>
+      <div class="dropdown-content">
+        <a href="cookies.html">Cookies</a>
+        <a href="lgbt.html">LGBT+</a>
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="lgpd.html">Lei Geral de Proteção de Dados</a>
+      </div>
+    </div>
   </nav>
 
   <section class="contato">
