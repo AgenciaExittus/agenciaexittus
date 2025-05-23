@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Serviços - Agência Exittus</title>
   <style>
     body {
@@ -12,12 +12,28 @@
       color: #333;
     }
 
-    header img {
-      width: 100%;
-      height: auto;
-      max-height: 250px;
+    header {
+      background-color: #4F7214;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .header-left img {
+      height: 100px;
+      width: auto;
       display: block;
-      margin: 0 auto;
     }
 
     nav {
@@ -29,22 +45,63 @@
       gap: 1rem;
       padding: 1rem 0;
       background-color: #f9f9f9;
+      position: relative;
     }
 
-    nav a {
+    nav a,
+    .dropdown > a {
+      position: relative;
       text-decoration: none;
       color: #647C01;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    nav a:hover,
+    .dropdown:hover > a {
+      background-color: #e9f0d1;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      color: #344800;
     }
 
     nav a.ativo {
       color: #000000;
-      font-weight: bold;
     }
 
-    nav a:hover {
-      color: #344800;
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 999;
+      min-width: 200px;
+      top: 100%;
+      left: 0;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-align: left;
+      color: #647C01;
+      font-weight: normal;
+      background-color: #fff;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f5e1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     .conteudo {
@@ -54,34 +111,37 @@
       text-align: justify;
     }
 
-    .conteudo h1 {
-      color: #647C01;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .conteudo img {
+    .conteudo img.servicos-img {
       display: block;
-      margin: 0 auto 2rem auto;
-      width: 100%;
-      max-width: 600px;
+      margin: 0 auto 1.5rem auto;
+      max-width: 500px;
       height: auto;
     }
 
-    ul {
-      list-style-type: disc;
-      margin-left: 2rem;
-      margin-bottom: 2rem;
-      color: #000;
-      text-align: justify;
-    }
-
-    ul li {
-      margin-bottom: 1.2rem;
-    }
-
-    ul li::marker {
+    .conteudo h1 {
+      text-align: center;
       color: #647C01;
+      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 2px rgba(100,124,1,0.3);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .conteudo ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+    }
+
+    .conteudo ul li {
+      color: #000000;
+      margin-bottom: 1rem;
+    }
+
+    .conteudo ul li::marker {
+      color: #4F7214; /* verde dos bullets */
     }
 
     footer {
@@ -109,47 +169,47 @@
       z-index: 999;
     }
 
-.whatsapp-button img {
-  max-width: 100px;
-  max-height: 100px;
-  width: auto;
-  height: auto;
-  display: block;
-}
-
-    .logo-final {
-      display: block;
-      margin: 2rem auto 0 auto;
-      width: 200px;
+    .whatsapp-button img {
+      max-width: 100px;
+      max-height: 100px;
+      width: auto;
       height: auto;
+      display: block;
     }
 
-  @media (max-width: 600px) {
-  .whatsapp-button img {
-    max-width: 80px;
-    max-height: 80px;
-  }
-}
-
-      .whatsapp-button img {
-        width: 100px;
+    @media (max-width: 600px) {
+      header {
         height: 100px;
+        padding: 0 10px;
+      }
+      .header-left img {
+        height: 70px;
+      }
+      nav {
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        flex-wrap: wrap;
       }
 
-      .logo-final {
-        width: 150px;
+      .dropdown-content {
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Banner -->
   <header>
-    <img src="banner.png" alt="Banner Exittus" />
+    <div class="header-left">
+      <img src="fundo.png" alt="Logo Agência Exittus" />
+      <span>Agência Exittus</span>
+    </div>
   </header>
 
-  <!-- Navegação -->
   <nav>
     <a href="bemvindo.html">BEM VINDO</a>
     <a href="sobre.html">SOBRE</a>
@@ -159,29 +219,35 @@
     <a href="servicos.html" class="ativo">SERVIÇOS</a>
     <a href="contato.html">CONTATO</a>
     <a href="plataforma.html">PLATAFORMA</a>
+    <div class="dropdown">
+      <a href="#">INFORMAÇÕES</a>
+      <div class="dropdown-content">
+        <a href="cookies.html">Cookies</a>
+        <a href="lgbt.html">LGBT+</a>
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="lgpd.html">Lei Geral de Proteção de Dados</a>
+      </div>
+    </div>
   </nav>
 
-  <!-- Conteúdo Principal -->
   <section class="conteudo">
+    <img src="servicos.png" alt="Serviços" class="servicos-img" />
     <h1>Nossos Serviços</h1>
-    <img src="servicos.png" alt="Serviços da Agência Exittus">
-
     <ul>
-      <li><strong>Recrutamento e Seleção estratégico:</strong> Realizamos um processo completo e personalizado para encontrar profissionais alinhados ao perfil, cultura e objetivos da sua empresa, garantindo a melhor contratação para o seu negócio.</li>
-      <li><strong>Triagem avançada de talentos:</strong> Utilizamos plataformas digitais e tecnologias inovadoras para identificar e selecionar os candidatos mais qualificados, otimizando tempo e aumentando a assertividade.</li>
-      <li><strong>Assessment e avaliações psicológicas:</strong> Aplicamos testes técnicos e comportamentais conduzidos por especialistas certificados, assegurando uma análise completa e fundamentada dos candidatos.</li>
-      <li><strong>Apoio psicológico individualizado:</strong> Oferecemos suporte emocional e psicológico para colaboradores e candidatos, promovendo bem-estar e equilíbrio no ambiente profissional.</li>
-      <li><strong>JobHunting para transição de carreira:</strong> Auxiliamos profissionais em busca de recolocação, com orientação estratégica e direcionamento para oportunidades compatíveis com seu perfil e experiência.</li>
-      <li><strong>Consultoria em gestão de pessoas:</strong> Estruturamos equipes, promovemos o desenvolvimento do clima organizacional e auxiliamos na melhoria contínua dos processos de recursos humanos.</li>
-      <li><strong>Pesquisa de clima organizacional:</strong> Realizamos levantamentos detalhados, análise de dados e oferecemos planos de ação práticos para fortalecer a cultura e aumentar a satisfação dos colaboradores.</li>
-      <li><strong>Implantação de sistemas ATS:</strong> Implementamos sistemas modernos de gestão de recrutamento que digitalizam e agilizam todo o processo seletivo, proporcionando maior controle e eficiência.</li>
-      <li><strong>Processos seletivos integrados:</strong> Combinamos a sensibilidade humana com ferramentas tecnológicas para garantir diversidade, inclusão e a melhor adequação dos candidatos às vagas.</li>
-      <li><strong>Treinamentos corporativos sob medida:</strong> Desenvolvemos programas personalizados para aprimorar habilidades técnicas e comportamentais, potencializando a performance das equipes.</li>
-      <li><strong>Espaço exclusivo para entrevistas:</strong> Disponibilizamos ambientes preparados com conforto, privacidade e suporte para dinâmicas, entrevistas e reuniões, facilitando todo o processo seletivo.</li>
+      <li>Recrutamento e Seleção estratégico: Realizamos um processo completo e personalizado para encontrar profissionais alinhados ao perfil, cultura e objetivos da sua empresa, garantindo a melhor contratação para o seu negócio.</li>
+      <li>Triagem avançada de talentos: Utilizamos plataformas digitais e tecnologias inovadoras para identificar e selecionar os candidatos mais qualificados, otimizando tempo e aumentando a assertividade.</li>
+      <li>Assessment e avaliações psicológicas: Aplicamos testes técnicos e comportamentais conduzidos por especialistas certificados, assegurando uma análise completa e fundamentada dos candidatos.</li>
+      <li>Apoio psicológico individualizado: Oferecemos suporte emocional e psicológico para colaboradores e candidatos, promovendo bem-estar e equilíbrio no ambiente profissional.</li>
+      <li>JobHunting para transição de carreira: Auxiliamos profissionais em busca de recolocação, com orientação estratégica e direcionamento para oportunidades compatíveis com seu perfil e experiência.</li>
+      <li>Consultoria em gestão de pessoas: Estruturamos equipes, promovemos o desenvolvimento do clima organizacional e auxiliamos na melhoria contínua dos processos de recursos humanos.</li>
+      <li>Pesquisa de clima organizacional: Realizamos levantamentos detalhados, análise de dados e oferecemos planos de ação práticos para fortalecer a cultura e aumentar a satisfação dos colaboradores.</li>
+      <li>Implantação de sistemas ATS: Implementamos sistemas modernos de gestão de recrutamento que digitalizam e agilizam todo o processo seletivo, proporcionando maior controle e eficiência.</li>
+      <li>Processos seletivos integrados: Combinamos a sensibilidade humana com ferramentas tecnológicas para garantir diversidade, inclusão e a melhor adequação dos candidatos às vagas.</li>
+      <li>Treinamentos corporativos sob medida: Desenvolvemos programas personalizados para aprimorar habilidades técnicas e comportamentais, potencializando a performance das equipes.</li>
+      <li>Espaço exclusivo para entrevistas: Disponibilizamos ambientes preparados com conforto, privacidade e suporte para dinâmicas, entrevistas e reuniões, facilitando todo o processo seletivo.</li>
     </ul>
   </section>
 
-  <!-- Rodapé -->
   <footer>
     <p><strong>Endereço:</strong> R. São José, 584 - sala 204 - Centro, Guaíba - RS, 92704-380</p>
     <p><strong>Telefone:</strong> (51) 99338-1495</p>
@@ -189,10 +255,10 @@
     <small>&copy; 2025 Agência Exittus. Todos os direitos reservados.</small>
   </footer>
 
-  <!-- Botão WhatsApp -->
   <a class="whatsapp-button" href="https://wa.me/5551993381495" target="_blank" rel="noopener">
     <img src="whatsapp.png" alt="WhatsApp" />
   </a>
 
 </body>
 </html>
+
