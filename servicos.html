@@ -109,15 +109,17 @@
       max-width: 900px;
       margin: 2rem auto;
       text-align: justify;
+      hyphens: auto;
+      word-spacing: normal;
+      letter-spacing: normal;
+      text-justify: inter-word;
     }
 
-    /* Imagem responsiva ajustada */
     .conteudo img.servicos-img {
       display: block;
       margin: 0 auto 1.5rem auto;
-      max-width: 500px;  /* Limita largura máxima no desktop */
-      width: 100%;       /* Ajusta largura ao container */
-      height: auto;      /* Mantém proporção */
+      max-width: 500px;
+      height: auto;
     }
 
     .conteudo h1 {
@@ -179,7 +181,6 @@
       display: block;
     }
 
-    /* Ajustes para mobile */
     @media (max-width: 600px) {
       header {
         height: 100px;
@@ -201,10 +202,9 @@
         left: 0;
         box-shadow: none;
       }
-
-      /* Imagem servicos para mobile */
+      
       .conteudo img.servicos-img {
-        max-width: 90%;  /* Largura limitada a 90% da tela no mobile */
+        max-width: 100%;
       }
     }
   </style>
@@ -269,5 +269,3 @@
 
 </body>
 </html>
-
-
