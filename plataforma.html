@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plataforma - Agência Exittus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Área do Candidato - Agência Exittus</title>
   <style>
     body {
       margin: 0;
@@ -12,12 +12,28 @@
       color: #333;
     }
 
-    header img {
-      width: 100%;
-      height: auto;
-      max-height: 250px;
+    header {
+      background-color: #4F7214;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .header-left img {
+      height: 100px;
+      width: auto;
       display: block;
-      margin: 0 auto;
     }
 
     nav {
@@ -26,68 +42,94 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
       gap: 1rem;
       padding: 1rem 0;
       background-color: #f9f9f9;
+      position: relative;
     }
 
-    nav a {
+    nav a,
+    .dropdown > a {
       text-decoration: none;
       color: #647C01;
       font-weight: bold;
-      transition: color 0.3s;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    .dropdown:hover > a {
+      background-color: #e9f0d1;
+      color: #344800;
     }
 
     nav a.ativo {
       color: #000000;
-      font-weight: bold;
     }
 
-    nav a:hover {
-      color: #344800;
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 999;
+      min-width: 200px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: #647C01;
+      background-color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     .conteudo {
       padding: 2rem;
-      max-width: 900px;
-      margin: 2rem auto;
-      text-align: justify;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .conteudo h1 {
-      color: #647C01;
       text-align: center;
+      color: #647C01;
+      font-size: 2.2rem;
       margin-bottom: 1.5rem;
     }
 
-    ul {
-      margin-left: 1.5rem;
+    .metodo {
       margin-bottom: 2rem;
-      padding-left: 0;
-      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
     }
 
-    ul li {
-      margin-bottom: 1.2rem;
-      padding-left: 1.8rem;
-      position: relative;
-      color: #000000; /* texto preto */
+    .metodo img {
+      width: 60px;
+      height: auto;
     }
 
-    ul li::before {
-      content: "●";
-      color: #647C01; /* bullet verde */
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-weight: bold;
-      font-size: 1.3rem;
-      line-height: 1rem;
+    .metodo div {
+      flex: 1;
     }
 
-    a {
-      color: #647C01;
-      text-decoration: underline;
+    .metodo h2 {
+      margin: 0;
+      color: #4F7214;
+    }
+
+    .metodo p {
+      margin: 0.5rem 0 0;
+      line-height: 1.5;
     }
 
     footer {
@@ -95,17 +137,6 @@
       padding: 2rem;
       text-align: center;
       border-top: 2px solid #647C01;
-      font-size: 0.95rem;
-    }
-
-    footer p {
-      margin: 0.4rem 0;
-    }
-
-    footer small {
-      display: block;
-      margin-top: 1rem;
-      color: #666;
     }
 
     .whatsapp-button {
@@ -115,47 +146,46 @@
       z-index: 999;
     }
 
-  .whatsapp-button img {
-  max-width: 100px;
-  max-height: 100px;
-  width: auto;
-  height: auto;
-  display: block;
-}
-
-    .logo-final {
-      display: block;
-      margin: 2rem auto 0 auto;
-      width: 200px;
-      height: auto;
+    .whatsapp-button img {
+      max-width: 100px;
     }
 
     @media (max-width: 600px) {
-  .whatsapp-button img {
-    max-width: 80px;
-    max-height: 80px;
-  }
-}
-
-      .whatsapp-button img {
-        width: 100px;
+      header {
         height: 100px;
+        padding: 0 10px;
       }
 
-      .logo-final {
-        width: 150px;
+      .header-left img {
+        height: 70px;
+      }
+
+      nav {
+        gap: 0.5rem;
+        padding: 0.5rem;
+      }
+
+      .metodo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .metodo img {
+        width: 50px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Banner -->
   <header>
-    <img src="banner.png" alt="Banner Exittus" />
+    <div class="header-left">
+      <img src="fundo.png" alt="Logo Agência Exittus" />
+      <span>Agência Exittus</span>
+    </div>
   </header>
 
-  <!-- Navegação -->
   <nav>
     <a href="bemvindo.html">BEM VINDO</a>
     <a href="sobre.html">SOBRE</a>
@@ -165,51 +195,72 @@
     <a href="servicos.html">SERVIÇOS</a>
     <a href="contato.html">CONTATO</a>
     <a href="plataforma.html" class="ativo">CANDIDATO</a>
+    <div class="dropdown">
+      <a href="#">INFORMAÇÕES</a>
+      <div class="dropdown-content">
+        <a href="cookies.html">Cookies</a>
+        <a href="lgbt.html">LGBT+</a>
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="lgpd.html">Lei Geral de Proteção de Dados</a>
+      </div>
+    </div>
   </nav>
 
-  <!-- Conteúdo Principal -->
   <section class="conteudo">
-    <h1><strong>PLATAFORMA ATS SELECTY 🚀</strong></h1>
-    <ul>
-      <li><strong>O que é a Selecty? 🤔</strong><br>
-        A Selecty é uma plataforma ATS (Applicant Tracking System) que facilita e automatiza o processo de recrutamento e seleção, conectando empresas e candidatos de forma eficiente e transparente.
-      </li>
-      <li><strong>Benefícios da Selecty para você! 🌟</strong><br>
-        • Processo rápido e simplificado de candidatura.<br>
-        • Triagem automática de currículos para que você seja avaliado com mais agilidade.<br>
-        • Centralização de todas as suas inscrições em um só lugar, com acompanhamento em tempo real.<br>
-        • Ferramentas para ajudar os recrutadores a encontrar o candidato ideal, aumentando suas chances.
-      </li>
-      <li><strong>Como funciona? ⚙️</strong><br>
-        A plataforma recebe os currículos dos candidatos e, por meio de filtros inteligentes e inteligência artificial, faz a pré-seleção para as vagas. Isso agiliza o trabalho dos recrutadores e permite que você receba feedback mais rápido.
-      </li>
-      <li><strong>Quer começar? 🎉</strong><br>
-        Cadastre-se na plataforma e tenha acesso às vagas disponíveis da Agência Exittus e de nossos parceiros. É simples, rápido e 100% online!
-      </li>
-    </ul>
-    <p style="text-align: center; font-weight: bold;">
-      Acesse agora e faça seu cadastro:<br>
-      <a href="https://agenciaexittus.selecty.com.br/login" target="_blank" rel="noopener">https://agenciaexittus.selecty.com.br/login</a>
-    </p>
-    <p style="text-align: center;">
-      Saiba mais sobre a plataforma em:<br>
-      <a href="https://selecty.app/home" target="_blank" rel="noopener">https://selecty.app/home</a>
-    </p>
+    <h1>Formas de Envio de Currículo</h1>
+
+    <div class="metodo">
+      <img src="wpp.png" alt="WhatsApp" />
+      <div>
+        <h2>WhatsApp</h2>
+        <p>Você pode enviar seu currículo diretamente pelo WhatsApp: 
+          <a href="https://wa.me/5551993381495" target="_blank"><strong>(51) 99338-1495</strong></a> 
+          ou 
+          <a href="https://wa.me/5551996976579" target="_blank"><strong>(51) 99697-6579</strong></a>. 
+          Ideal para contatos diretos e dúvidas rápidas.
+        </p>
+      </div>
+    </div>
+
+    <div class="metodo">
+      <img src="email.png" alt="Email" />
+      <div>
+        <h2>Email</h2>
+        <p>Envie seu currículo em PDF com uma apresentação para: 
+          <strong>adm@agenciaexittus.com</strong> ou 
+          <strong>bancodetalentosexittus@gmail.com</strong>. 
+          É uma forma organizada e detalhada de envio.
+        </p>
+      </div>
+    </div>
+
+    <div class="metodo">
+      <img src="formulario.png" alt="Formulário" />
+      <div>
+        <h2>Formulário Google</h2>
+        <p>Preencha nosso <a href="https://forms.gle/j4QoyCdhDJBfVQ2LA" target="_blank">formulário</a> para garantir que seu currículo seja armazenado com dados atualizados.</p>
+      </div>
+    </div>
+
+    <div class="metodo">
+      <img src="formulario.png" alt="ATS Selecty" />
+      <div>
+        <h2>Plataforma ATS Selecty</h2>
+        <p>Cadastre-se em <a href="https://agenciaexittus.selecty.com.br/login" target="_blank">Selecty</a> para acompanhar processos seletivos, atualizar seu currículo e receber oportunidades.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Rodapé -->
   <footer>
     <p><strong>Endereço:</strong> R. São José, 584 - sala 204 - Centro, Guaíba - RS, 92704-380</p>
-    <p><strong>Telefone:</strong> (51) 99338-1495</p>
+    <p><strong>Telefone:</strong> <a href="https://wa.me/5551993381495" target="_blank">(51) 99338-1495</a></p>
     <p><strong>E-mail:</strong> adm@agenciaexittus.com</p>
     <small>&copy; 2025 Agência Exittus. Todos os direitos reservados.</small>
   </footer>
 
-  <!-- Botão WhatsApp -->
   <a class="whatsapp-button" href="https://wa.me/5551993381495" target="_blank" rel="noopener">
     <img src="whatsapp.png" alt="WhatsApp" />
   </a>
 
 </body>
 </html>
-
