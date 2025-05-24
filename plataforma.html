@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bem-vindo à Agência Exittus</title>
+  <title>Área do Candidato - Agência Exittus</title>
   <style>
     body {
       margin: 0;
@@ -42,6 +42,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
       gap: 1rem;
       padding: 1rem 0;
       background-color: #f9f9f9;
@@ -50,20 +51,17 @@
 
     nav a,
     .dropdown > a {
-      position: relative;
       text-decoration: none;
       color: #647C01;
       font-weight: bold;
-      transition: all 0.3s ease;
       padding: 0.5rem 1rem;
       border-radius: 5px;
-      display: inline-block;
+      transition: 0.3s;
     }
 
     nav a:hover,
     .dropdown:hover > a {
       background-color: #e9f0d1;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
       color: #344800;
     }
 
@@ -73,31 +71,22 @@
 
     .dropdown {
       position: relative;
-      display: inline-block;
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #ffffff;
+      background-color: white;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       z-index: 999;
       min-width: 200px;
-      top: 100%;
-      left: 0;
     }
 
     .dropdown-content a {
       display: block;
       padding: 10px;
-      text-align: left;
       color: #647C01;
-      font-weight: normal;
       background-color: #fff;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #f0f5e1;
     }
 
     .dropdown:hover .dropdown-content {
@@ -106,64 +95,41 @@
 
     .conteudo {
       padding: 2rem;
-      max-width: 900px;
-      margin: 2rem auto;
-      text-align: justify;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .conteudo h1 {
       text-align: center;
       color: #647C01;
+      font-size: 2.2rem;
       margin-bottom: 1.5rem;
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-shadow: 1px 1px 2px rgba(100,124,1,0.3);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .conteudo p {
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-      font-size: 1.1rem;
+    .metodo {
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
     }
 
-    .conteudo img {
-      display: block;
-      margin: 2rem auto;
-      max-width: 700px;
-      width: 100%;
+    .metodo img {
+      width: 60px;
       height: auto;
-      transition: transform 0.3s ease;
-      cursor: pointer;
     }
 
-    .conteudo img:hover {
-      transform: scale(1.05);
+    .metodo div {
+      flex: 1;
     }
 
-    .fale-conosco-btn {
-      display: inline-block;
-      margin: 2rem auto 0 auto;
-      padding: 12px 28px;
-      background-color: #647C01;
-      color: white;
-      font-weight: 600;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(100,124,1,0.4);
-      transition: background-color 0.3s ease;
-      text-align: center;
-      display: block;
-      max-width: 200px;
+    .metodo h2 {
+      margin: 0;
+      color: #4F7214;
     }
 
-    .fale-conosco-btn:hover {
-      background-color: #A9C843;
-      box-shadow: 0 6px 12px rgba(169,200,67,0.6);
+    .metodo p {
+      margin: 0.5rem 0 0;
+      line-height: 1.5;
     }
 
     footer {
@@ -171,17 +137,6 @@
       padding: 2rem;
       text-align: center;
       border-top: 2px solid #647C01;
-      font-size: 0.95rem;
-    }
-
-    footer p {
-      margin: 0.4rem 0;
-    }
-
-    footer small {
-      display: block;
-      margin-top: 1rem;
-      color: #666;
     }
 
     .whatsapp-button {
@@ -192,11 +147,7 @@
     }
 
     .whatsapp-button img {
-      max-width: 60px;
-      max-height: 60px;
-      width: auto;
-      height: auto;
-      display: block;
+      max-width: 100px;
     }
 
     @media (max-width: 600px) {
@@ -204,28 +155,30 @@
         height: 100px;
         padding: 0 10px;
       }
+
       .header-left img {
         height: 70px;
       }
+
       nav {
-        justify-content: center;
         gap: 0.5rem;
         padding: 0.5rem;
-        flex-wrap: wrap;
       }
 
-      .dropdown-content {
-        position: relative;
-        top: 0;
-        left: 0;
-        box-shadow: none;
+      .metodo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .metodo img {
+        width: 50px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Cabeçalho -->
   <header>
     <div class="header-left">
       <img src="fundo.png" alt="Logo Agência Exittus" />
@@ -233,16 +186,15 @@
     </div>
   </header>
 
-  <!-- Navegação -->
   <nav>
-    <a href="bemvindo.html" class="ativo">BEM VINDO</a>
+    <a href="bemvindo.html">BEM VINDO</a>
     <a href="sobre.html">SOBRE</a>
     <a href="missao.html">MISSÃO</a>
     <a href="visao.html">VISÃO</a>
     <a href="valores.html">VALORES</a>
     <a href="servicos.html">SERVIÇOS</a>
     <a href="contato.html">CONTATO</a>
-    <a href="plataforma.html">CANDIDATO</a>
+    <a href="plataforma.html" class="ativo">CANDIDATO</a>
     <div class="dropdown">
       <a href="#">INFORMAÇÕES</a>
       <div class="dropdown-content">
@@ -254,18 +206,62 @@
     </div>
   </nav>
 
-  <!-- Rodapé -->
+  <section class="conteudo">
+    <h1>Formas de Envio de Currículo</h1>
+
+    <div class="metodo">
+      <img src="wpp.png" alt="WhatsApp" />
+      <div>
+        <h2>WhatsApp</h2>
+        <p>Você pode enviar seu currículo diretamente pelo WhatsApp: 
+          <a href="https://wa.me/5551993381495" target="_blank"><strong>(51) 99338-1495</strong></a> 
+          ou 
+          <a href="https://wa.me/5551996976579" target="_blank"><strong>(51) 99697-6579</strong></a>. 
+          Ideal para contatos diretos e dúvidas rápidas.
+        </p>
+      </div>
+    </div>
+
+    <div class="metodo">
+      <img src="email.png" alt="Email" />
+      <div>
+        <h2>Email</h2>
+        <p>Envie seu currículo em PDF com uma apresentação para: 
+          <strong>adm@agenciaexittus.com</strong> ou 
+          <strong>bancodetalentosexittus@gmail.com</strong>. 
+          É uma forma organizada e detalhada de envio.
+        </p>
+      </div>
+    </div>
+
+    <div class="metodo">
+      <img src="formulario.png" alt="Formulário" />
+      <div>
+        <h2>Formulário Google</h2>
+        <p>Preencha nosso <a href="https://forms.gle/j4QoyCdhDJBfVQ2LA" target="_blank">formulário</a> para garantir que seu currículo seja armazenado com dados atualizados.</p>
+      </div>
+    </div>
+
+    <div class="metodo">
+      <img src="formulario.png" alt="ATS Selecty" />
+      <div>
+        <h2>Plataforma ATS Selecty</h2>
+        <p>Cadastre-se em <a href="https://agenciaexittus.selecty.com.br/login" target="_blank">Selecty</a> para acompanhar processos seletivos, atualizar seu currículo e receber oportunidades.</p>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <p><strong>Endereço:</strong> R. São José, 584 - sala 204 - Centro, Guaíba - RS, 92704-380</p>
-    <p><strong>Telefone:</strong> (51) 99338-1495</p>
+    <p><strong>Telefone:</strong> <a href="https://wa.me/5551993381495" target="_blank">(51) 99338-1495</a></p>
     <p><strong>E-mail:</strong> adm@agenciaexittus.com</p>
     <small>&copy; 2025 Agência Exittus. Todos os direitos reservados.</small>
   </footer>
 
-  <!-- Botão WhatsApp fixo -->
   <a class="whatsapp-button" href="https://wa.me/5551993381495" target="_blank" rel="noopener">
     <img src="whatsapp.png" alt="WhatsApp" />
   </a>
 
 </body>
 </html>
+
